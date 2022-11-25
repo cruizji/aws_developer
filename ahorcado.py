@@ -3,6 +3,7 @@
 
 texto = input("Escribe un texto: ")
 lista = []
+lista2 = []
 contador = 0
 i = 0
 exito = False
@@ -18,28 +19,43 @@ for word in division:
 numero = int(input("Dime un numero contenido entre 1 y {}: ".format(contador)))
 
 adivina = lista[numero - 1]
+acierto = False
+intentos = int(len(adivina) + 1)
+k = 0
 
 print("Adivina la palabra: {}".format(adivina))
-caracter = input("Introduce un caracter de la palabra: ")
-z=0
-for character in adivina:
-    if caracter in adivina:
-        exito = True and posiciones.append(z)
-        
-    z = z + 1
-    
-print("estas son las posiciones del caracter: {}".format(posiciones))
-if exito == True:
-    numeroletras = len(adivina)
-    print(numeroletras)
-    for i in range(numeroletras):
-      cadena = cadena + "*"
-    print (cadena)
-    print("Este caracter {} esta presente en {} en la posicion {}".format(caracter, adivina, posiciones))
-else:
-    print("Este caracter {} NO esta presente en {} ".format(caracter, adivina))
-        
+while acierto == False and contador <= intentos:
+    caracter = input("Introduce un caracter de la palabra: ")
    
+    if k == 0:
+        for i in adivina : # Inicializar la lista y rellenarla con valores
+            lista2.append("*")
+            print(i)
+            k = k + 1
+        print(lista2)
+        
+    
+    for index, character in enumerate(adivina):
+        if caracter == character:
+            lista2[index]=caracter
+        else:
+            exito = False
+        print(index)    
+        
+    if "*" in lista2:  # Chequear que la lista esta completa y se ha adivinado la palabra
+        acierto = False
+    else:
+        acierto = True
+        
+    restantes= intentos - contador
+    print("estas son las posiciones del caracter: {} y tienes estos intentos {}".format(lista2, restantes )) 
+    contador = contador + 1
+    if restantes < 1:
+        print ("You are not GOAT, bad luck !!!!!")
+        raise SystemExit
+      
+        
+print("Nice !!!!!, You are GOAT (Greatest of all times")
         
     
 #print(numero)

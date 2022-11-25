@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Online Python compiler (interpreter) to run Python online.
 # Write Python 3 code in this online editor and run it.
 
@@ -10,7 +11,7 @@ exito = False
 cadena =""
 division = texto.split()
 posiciones=[]
-#!/usr/bin/env
+
 
 for word in division:
     lista.append(word)

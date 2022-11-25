@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # Online Python compiler (interpreter) to run Python online.
 # Write Python 3 code in this online editor and run it.
 
@@ -11,7 +10,7 @@ exito = False
 cadena =""
 division = texto.split()
 posiciones=[]
-
+#!/usr/bin/env
 
 for word in division:
     lista.append(word)
@@ -21,7 +20,7 @@ numero = int(input("Dime un numero contenido entre 1 y {}: ".format(contador)))
 
 adivina = lista[numero - 1]
 acierto = False
-intentos = int(len(adivina) + 1)
+intentos = int(len(adivina) + 3)
 k = 0
 
 print("La palabra a adivinar tiene {} caracteres".format(len(adivina)))
@@ -49,11 +48,11 @@ while acierto == False and contador <= intentos:
         acierto = True
         break
         
-    restantes= intentos - contador
+    restantes =int(intentos - contador)
     print("estas son las posiciones del caracter: {} y tienes estos intentos {}".format(lista2, restantes )) 
     contador = contador + 1
     if restantes < 1:
-        print ("!!!!!! :( You are not GOAT, bad luck !!!!!, the word to guess was: {}".format(adivina))
+        print ("!!!!!! :( You are not GOAT, bad luck !!!!!, the word to guess was: --{}--".format(adivina))
         raise SystemExit
       
         

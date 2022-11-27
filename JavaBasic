@@ -1,0 +1,41 @@
+
+public class MyClass {
+    public static void main(String args[]) {
+        
+       int numeroEntero = 1;
+       double numeroDouble = 2.8;
+       char letra = 'c';
+       String frase = "Hola Mundo";
+       int numeroChico = 0;
+       int numeroGrande = 10;
+       
+       if(numeroChico < numeroGrande){
+           System.out.println("El numero chico es menor a numeroGrande");
+       }else{
+           System.out.println("No pasa nada");
+       }
+       
+       while(numeroChico < numeroGrande) {
+           System.out.println("Correcto");
+           numeroChico++;
+       }
+       
+       for (int i=0; i < 10; i++) {
+             System.out.println(i);
+       }
+       
+       System.out.println(numeroEntero);
+      
+       gato();
+       cat();
+       System.out.println(cat());
+    }
+    public static void gato(){
+        int variable = 0;
+        System.out.println("Miau " + variable);
+    }
+    public static int cat(){
+        int variable = 1;
+        return variable;
+    }
+}
